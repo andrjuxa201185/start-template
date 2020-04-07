@@ -1,0 +1,14 @@
+:global {
+  @import 'variables';
+  @import 'normalize';
+  @import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+  @import '~rc-slider/assets/index';
+  @import '~react-quill/dist/quill.snow';
+  @import 'fonts';
+  @import 'global';
+  @import 'blocks/b-modal';
+  @import 'blocks/b-datePicker';
+  @import 'blocks/b-list-square-items';
+  @import 'blocks/b-popup';
+  @import 'blocks/b-placeautocomplete';
+}

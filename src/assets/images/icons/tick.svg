@@ -1,0 +1,12 @@
+<svg id="tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7749dd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1289.72,610.009l2.27,2.262-8.75,8.72-2.27-2.263Z" transform="translate(-1277 -610)"/>
+  <path id="Rectangle_537_copy" data-name="Rectangle 537 copy" class="cls-1" d="M1277.01,614.32l2.27-2.263,6.24,6.223-2.27,2.262Z" transform="translate(-1277 -610)"/>
+</svg>

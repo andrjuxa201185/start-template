@@ -1,0 +1,56 @@
+.select {
+  position: relative;
+
+  &List {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    max-height: 230px;
+    border: solid 1px lightgrey;
+    border-top: none;
+    background-color: white;
+    overflow-y: auto;
+    list-style-type: none;
+  }
+
+  &ListItem {
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-bottom: solid 1px lightgrey;
+    cursor: pointer;
+    color: #262626;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+
+    &Mult {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:hover {
+      background-color: #eaeaea;
+      cursor: pointer;
+    }
+  }
+
+  &Arrow {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    color: lightgrey;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+
+.multiselect {
+  width: 20px;
+  border: solid 1px lightgray;
+
+  &Icon {
+    font-size: 18px;
+  }
+}

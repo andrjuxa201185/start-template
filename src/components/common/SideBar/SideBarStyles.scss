@@ -1,0 +1,14 @@
+.sidebar {
+  padding: 40px 0 30px 30px;
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  cursor: pointer;
+
+  &Active {
+    color: #4e0082;
+  }
+}

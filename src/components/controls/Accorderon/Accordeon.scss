@@ -1,0 +1,48 @@
+.ac {
+  border: solid 1px lightgray;
+
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-size: 24px;
+    background-color: #ebebeb;
+    color: #262626;
+    font-family: "Centuri Gothic", sans-serif;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      padding: 15px 20px;
+    }
+  }
+
+  &Text {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  &Icon {
+    font-size: 28px;
+    transition: all .3s;
+    cursor: pointer;
+
+    &Open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &Body {
+    background-color: white;
+    padding: 30px;
+    border-top: solid 1px lightgray;
+    @media screen and (max-width: 980px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 560px) {
+      padding: 10px;
+    }
+    @media screen and (max-width: 375px) {
+      padding: 5px;
+    }
+  }
+}

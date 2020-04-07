@@ -1,0 +1,28 @@
+.nav {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto;
+
+  &Info {
+    display: block;
+    min-width: 70px;
+    text-align: center;
+  }
+
+  &Icon {
+    color: #777;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+  }
+}

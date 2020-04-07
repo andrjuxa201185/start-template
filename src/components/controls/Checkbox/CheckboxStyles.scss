@@ -1,0 +1,115 @@
+.container {
+  label {
+    display: inline-block;
+    position: relative;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .checkboxLabel {
+    background-color: #4e0082;
+    border-color: #4e0082;
+
+    &:before {
+      transform: translateX(35px);
+      background-color: #fff;
+      background-image: url("../../../assets/images/icons/check.png");
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media screen and (max-width: 480px) {
+        transform: translateX(25px);
+      }
+    }
+
+    + .checkboxText {
+      &:after {
+        content: 'ON';
+        color: #000;
+      }
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 115px;
+  height: 31px;
+  @media screen and (max-width: 480px) {
+    width: 52px;
+    height: 26px;
+  }
+}
+
+.checkbox {
+  display: none;
+
+  &Label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 2px solid #777777;
+    width: 66px;
+    height: 31px;
+    border-radius: 15px;
+    @media screen and (max-width: 480px) {
+      width: 50px;
+      height: 26px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 19px;
+      width: 19px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #777777;
+      background-image: url('../../../assets/images/icons/close-small.png');
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: .4s;
+      border-radius: 50%;
+      @media screen and (max-width: 480px) {
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+      }
+    }
+  }
+
+  &Text {
+    position: absolute;
+    right: 0;
+    width: 47px;
+    height: 31px;
+    font-size: 14.5px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    display: block;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+
+    &:after {
+      content: 'OFF';
+      color: #777777;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 13px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #111111;
+}
+
+a {
+  transition: .3s ease-in-out;
+  text-decoration: none;
+  color: #008cff;
+}
+
+button {
+  transition: .3s ease-in-out;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  padding: 30px 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #262626;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #262626;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 900;
+  color: #262626;
+}
+
+html, body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.my-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  @media (max-width: 1140px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0 5px;
+  }
+}
+
+.auth {
+  &__background {
+    background-color: #f8f8f8;
+    background-size: 100%;
+    min-height: calc(100vh - 180px);
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media screen and (max-width: 640px) {
+      padding: 0 25px 25px;
+    }
+    @media screen and (max-width: 375px) {
+      padding: 0 5px 20px;
+    }
+  }
+
+  &__inputWrapper {
+    padding-bottom: 35px;
+    position: relative;
+    @media screen and (max-width: 480px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__btnWrapper {
+    padding-top: 10px;
+  }
+
+  &__signIn {
+    text-align: center;
+    padding-top: 30px;
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+
+    a {
+      color: #008cff;
+    }
+  }
+}
+
+.b-confirm {
+  &Body {
+    padding: 30px 20px;
+    border-bottom: solid 1px lightgrey;
+  }
+
+  &Text {
+    padding: 40px 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "NewBaskervilleStd";
+    border-bottom: solid 1px lightgrey;
+  }
+
+  &TextBlock {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+  }
+
+  &Btns {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &Btn {
+    margin: 0 20px;
+    min-width: 130px;
+  }
+}
