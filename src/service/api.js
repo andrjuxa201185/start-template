@@ -196,7 +196,7 @@ export default class Api {
     console.log(`Error occurred\\n${response.status} ${response.data.code}`); //eslint-disable-line
   }
 
-  /*********THIS IS TESTING REQUEST FOR LOCAL SERVER*************/
+  /*********THIS IS TESTING REQUEST TO LOCAL SERVER*************/
   static testRequest(route, method = 'get', data) {
     const options = {
       method,

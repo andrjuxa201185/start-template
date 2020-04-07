@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Input, Button} from '../../controls';
-import {FiLock} from 'react-icons/fi';
 import styles from './RegistrationStyles.scss';
 
 const RegistrationView = ({
@@ -41,7 +40,6 @@ const RegistrationView = ({
         type='password'
         onChange={onChange}
         error={errors['password']}
-        Icon={FiLock}
       />
       <Button
         onClick={onSubmit}
