@@ -6,7 +6,7 @@ const Textarea = ({error, className = '', ...props}) => {
 
   return (
     <div className={`${styles.container}`}>
-        <textarea
+      <textarea
           className={`${styles.textarea} ${className} ${error ? styles.textarea_error : ''}`}
           {...props}
         />

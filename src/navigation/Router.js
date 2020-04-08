@@ -61,6 +61,7 @@ const RouterComponent = ({token}) => {
             exact={!!exact}
           />
         ))}
+
         <Redirect to={{pathname: token ? ROUTES.DASHBOARD : ROUTES.LOGIN}}/>
       </Switch>
       <Footer/>
