@@ -9,35 +9,17 @@
   box-sizing: border-box;
   padding: 20px;
   color: #111111;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1;
   resize: none;
   display: block;
-  @media screen and (max-width: 768px){
-    font-size: 16px;
-    &:focus {
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 480px) {
-    padding: 10px;
-  }
-  &__container {
-    position: relative;
-  }
+
   &_error {
     background-color: rgba(255, 0, 0, 0.03);
-    //border-color: #FF4236;
   }
 }
 
-.label {
-  color: #262626;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 26px;
-}
 
 .error {
   font-size: 12px;

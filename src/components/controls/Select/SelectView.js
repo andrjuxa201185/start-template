@@ -79,7 +79,7 @@ class SelectView extends React.Component {
   };
 
   render() {
-    const {multiselect, classWrapper = '', Icon, classItem = '', className = '', value, placeholder = '', error = ''} = this.props;
+    const {multiselect, classWrapper = '', classItem = '', className = '', value, placeholder = ''} = this.props;
     const {isOpen, items} = this.state;
 
     return (
@@ -87,19 +87,20 @@ class SelectView extends React.Component {
         className={`${styles.select} ${classWrapper}`}
         ref={this.nodeRef}
       >
-
         <div onClick={this.handlerOpen}>
           <Input
             placeholder={placeholder}
             disabled
             value={value}
-            error={error}
             className={className}
-            Icon={Icon}
           />
         </div>
-        <FaChevronDown onClick={this.handlerOpen}
-                       className={styles.selectArrow}/>
+
+        <FaChevronDown
+          onClick={this.handlerOpen}
+          className={styles.selectArrow}
+        />
+
         {isOpen &&
         <ul className={styles.selectList}>
           {items.map(({item, checked}, i) => (
@@ -112,6 +113,7 @@ class SelectView extends React.Component {
               onClick={() => this.onChange(item.key || item)}
             >
               {item.value || item}
+
               {multiselect &&
               <>
                 {checked
@@ -137,7 +139,6 @@ SelectView.propTypes = {
   multiselect: PropTypes.bool,
   classWrapper: PropTypes.string,
   classItem: PropTypes.string,
-  Icon: PropTypes.func,
   className: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,

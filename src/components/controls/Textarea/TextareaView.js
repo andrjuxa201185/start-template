@@ -2,29 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TextareaStyles.scss';
 
-const Textarea = ({label, error, className = '', ...props}) => {
+const Textarea = ({error, className = '', ...props}) => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={styles.label}>
-        {label}
-      </div>
-      <div className={styles.textarea__container}>
         <textarea
-          {...props}
           className={`${styles.textarea} ${className} ${error ? styles.textarea_error : ''}`}
-        >
-        </textarea>
+          {...props}
+        />
+
+      <div className={styles.error}>
+        {error ? error : ''}
       </div>
-      {/*<div className={styles.error}>*/}
-      {/*{error ? error : ''}*/}
-      {/*</div>*/}
     </div>
   );
 };
 
 Textarea.propTypes = {
-  label: PropTypes.string,
   error: PropTypes.string,
   className: PropTypes.string,
 };

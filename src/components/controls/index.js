@@ -8,6 +8,7 @@ import Textarea from "./Textarea/TextareaView";
 import DragAndDrop from "./DragAndDrop/DragAndDrop";
 import InputSlider from "./InputSlider/InputSliderView";
 import InputRange from "./InputRange/InputRangeView";
+import DPicker from "./DatePicker/DatePicker";
 
 export {
   Button,
@@ -20,4 +21,5 @@ export {
   DragAndDrop,
   InputSlider,
   InputRange,
+  DPicker,
 };

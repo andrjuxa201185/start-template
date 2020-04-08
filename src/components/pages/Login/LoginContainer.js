@@ -25,19 +25,19 @@ class LoginContainer extends Component {
     ],
   };
 
-  componentDidMount() {
-    window.addEventListener('keypress', this._handleKeyDown);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keypress', this._handleKeyDown);
-  }
-
-  _handleKeyDown = e => {
-    if (e.key === 'Enter') {
-      this.handleSubmit(e);
-    }
-  };
+  // componentDidMount() {
+  //   window.addEventListener('keypress', this._handleKeyDown);
+  // }
+  //
+  // componentWillUnmount() {
+  //   window.removeEventListener('keypress', this._handleKeyDown);
+  // }
+  //
+  // _handleKeyDown = e => {
+  //   if (e.key === 'Enter') {
+  //     this.handleSubmit(e);
+  //   }
+  // };
 
   handleChange = ({target}) => {
     const field = target.name;

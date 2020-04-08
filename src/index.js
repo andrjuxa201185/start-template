@@ -7,10 +7,9 @@ import {globals} from './store/globals';
 import configureStore from './store/configure/configureStore';
 import Router from './navigation/Router';
 import rootSaga from './store/configure/rootSaga';
-
 import history from './store/history';
 import './assets/styles/style.scss';
-import App from './App.js';
+import {Alert} from './components/common';
 
 globals.history = history;
 globals.store = configureStore();
@@ -20,9 +19,10 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
   <Provider store={globals.store} >
     <ConnectedRouter history={history}>
-      <App>
+      <>
         <Router />
-      </App>
+        <Alert/>
+      </>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')

@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Input, Button} from '../../controls';
+import {
+  Input,
+  Button,
+  Select,
+  DPicker,
+} from '../../controls';
 import styles from './LoginStyles.scss';
 
 const LoginView = ({
@@ -26,6 +31,13 @@ const LoginView = ({
         onChange={onChange}
         error={errors['password']}
       />
+      <Select
+        onSelect={() => {
+        }} list={[1, 2, 3, 4]}
+      />
+
+      <DPicker/>
+
       <Button
         onClick={onSubmit}
         title={'SIGN IN'}
