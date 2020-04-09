@@ -9,10 +9,10 @@ import Router from './navigation/Router';
 import {store} from './store/configure/configureStore';
 
 ReactDOM.render(
-  <Provider store={store} >
+  <Provider store={store}>
     <ConnectedRouter history={globals.history}>
       <>
-        <Router />
+        <Router/>
         <Alert/>
       </>
     </ConnectedRouter>
