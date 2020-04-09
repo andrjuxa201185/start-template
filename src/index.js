@@ -7,10 +7,11 @@ import {globals} from './store/globals';
 import configureStore from './store/configure/configureStore';
 import Router from './navigation/Router';
 import rootSaga from './store/configure/rootSaga';
-import history from './store/history';
+import {createBrowserHistory} from 'history';
 import './assets/styles/style.scss';
 import {Alert} from './components/common';
 
+const history = createBrowserHistory();
 globals.history = history;
 globals.store = configureStore();
 
