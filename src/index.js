@@ -1,25 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {ConnectedRouter} from 'connected-react-router';
-import {sagaMiddleware} from './store/configure/rootMiddleware';
-import {globals} from './store/globals';
-import configureStore from './store/configure/configureStore';
-import Router from './navigation/Router';
-import rootSaga from './store/configure/rootSaga';
-import {createBrowserHistory} from 'history';
 import './assets/styles/style.scss';
 import {Alert} from './components/common';
-
-const history = createBrowserHistory();
-globals.history = history;
-globals.store = configureStore();
-
-sagaMiddleware.run(rootSaga);
+import {ConnectedRouter} from 'connected-react-router';
+import {globals} from './store/globals';
+import Router from './navigation/Router';
+import {store} from './store/configure/configureStore';
 
 ReactDOM.render(
-  <Provider store={globals.store} >
-    <ConnectedRouter history={history}>
+  <Provider store={store} >
+    <ConnectedRouter history={globals.history}>
       <>
         <Router />
         <Alert/>

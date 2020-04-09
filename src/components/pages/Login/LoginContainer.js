@@ -25,9 +25,10 @@ class LoginContainer extends Component {
     ],
   };
 
-  // componentDidMount() {
-  //   window.addEventListener('keypress', this._handleKeyDown);
-  // }
+  componentDidMount() {
+    // this.props.login({});
+    // window.addEventListener('keypress', this._handleKeyDown);
+  }
   //
   // componentWillUnmount() {
   //   window.removeEventListener('keypress', this._handleKeyDown);

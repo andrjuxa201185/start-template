@@ -1,12 +1,20 @@
 import {createStore, compose} from 'redux';
 import {globals} from '../globals';
-import rootMiddleware from './rootMiddleware';
 import {combineReducers} from 'redux';
 import {connectRouter} from 'connected-react-router';
-
 import auth from '../auth/authReducer';
 import alert from '../alert/alertReducer';
 import userProfile from '../userProfile/userProfileReducer';
+import rootSaga from '../configure/rootSaga';
+import {applyMiddleware} from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import {routerMiddleware} from 'connected-react-router';
+import {createBrowserHistory} from 'history';
+
+const history = createBrowserHistory();
+globals.history = history;
+
+export const sagaMiddleware = createSagaMiddleware();
 
 const rootReducers = history => combineReducers({
   router: connectRouter(history),
@@ -18,13 +26,14 @@ const rootReducers = history => combineReducers({
 // eslint-disable-next-line
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const configureStore = () => {
-  globals.store = createStore(
-    rootReducers(globals.history),
-    composeEnhancers(rootMiddleware),
-  );
+export const store = createStore(
+  rootReducers(globals.history),
+  composeEnhancers(applyMiddleware(
+    routerMiddleware(globals.history),
+    sagaMiddleware,
+  )),
+);
 
-  return globals.store;
-};
+globals.store = store;
 
-export default configureStore;
+sagaMiddleware.run(rootSaga);
