@@ -27,7 +27,7 @@
     "connected-react-router": "^6.5.2",
     "history": "^4.10.1",
     "js-file-download": "^0.4.8",
-    "lodash": "4.17.11",
+    "lodash": "4.17.19",
     "moment": "^2.24.0",
     "rc-slider": "^8.7.1",
     "react": "^16.11.0",
